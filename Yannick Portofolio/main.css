@@ -1,3 +1,4 @@
+@import url('./fonts.css');
 *{
     margin: 0;
     padding: 0;
@@ -18,7 +19,7 @@ body{
 .Landing-Page{
    display: flex;
    flex-direction: column;
-   font-family: Arial, Helvetica, sans-serif;
+   
    /* padding: 50px; */
 }
 .head-content{
@@ -33,11 +34,16 @@ body{
 .left-side h4{
     color: white;
     margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: 100;
     
 }
 .head-left h3{
     color: white;
     cursor: pointer;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 5px;
     
 }
 .main-content{
@@ -63,6 +69,8 @@ body{
 }
 .left-side h2{
     margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: 400;
 }
 .right-side{
     width: 50%;
@@ -79,18 +87,19 @@ body{
     /* opacity: 0.9; */
     
 }
-.menu{
-    list-style-type: none;
-    line-height: 20px;
-    text-decoration: none;
-    
-  
-}
+
 .menu li{
     display: inline;
-    margin-left: 20px;
+    margin-left: 30px;
     color: white;
+    cursor: pointer;
+    font-size: 20px;
     
+    
+}
+.menu li:hover{
+    color: rgb(41, 35, 35);
+    transition: 0.4s;
 }
 .icons{
     list-style-type: none;
@@ -99,9 +108,8 @@ body{
     
 }
 .icons li{
-
-
     display: inline;
+    font-size: 35px;
 }
 
 
@@ -109,15 +117,15 @@ body{
 .fab, .fas{
     padding: .5em;
     
-    border-radius: 50%;
-    margin-bottom: .5vh;
+    border-radius: 100%;
+    margin-bottom: .10vh;
     cursor: pointer;
     transition: 0.5s;
 }
 .fab:hover{
-    background-color:  lightseagreen;
+    background-color: rgb(41, 35, 35);
 
 }
 .fas:hover{
-    background-color: lightseagreen;
+    background-color: rgb(41, 35, 35);
 }
