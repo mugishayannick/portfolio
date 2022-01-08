@@ -1,0 +1,63 @@
+@import url('./fonts.css');
+@import url('./header.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+}
+.section-one{
+    display: flex;
+    flex-direction: column;
+    background-color: #6F77F4;
+    
+}
+.up-side{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px;
+}
+.left-up-side{
+    color: white;
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+    
+}
+.menu li{
+    display: inline;
+    margin-left: 20px;
+}
+.menu li a:hover{
+    color: rgb(8, 66, 60);
+    transition: 0.4s;
+}
+.main-side{
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+.middle-up-side{
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.middle-up-side h6{
+    font-size: 15px;
+    font-weight: 200;
+}
+.middle-up-side h2{
+    font-size: 49px;
+    font-weight: bold;
+}
+
