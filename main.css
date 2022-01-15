@@ -19,12 +19,28 @@ body{
    
    /* padding: 50px; */
 }
+.head-right{
+    display: flex;
+    
+}
+.burger{
+    color: white;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    display: none;
+}
 
 .left-side h4{
     color: white;
     margin-bottom: 10px;
     font-size: 35px;
     font-weight: 100;
+    
+}
+.menu{
+    letter-spacing: 3px;
+    font-size: 14px;
     
 }
 
@@ -88,10 +104,61 @@ body{
     cursor: pointer;
     transition: 0.5s;
 }
-.fab:hover{
-    background-color: rgb(41, 35, 35);
 
+@media only screen and (max-width:700px){
+    body{
+        width: 100%;
+    }
 }
-.fas:hover{
-    background-color: rgb(41, 35, 35);
+@media only screen and (max-width:800px){
+    body{
+        overflow-x: hidden;
+    }
+    .menu{
+        position: fixed;
+        right: -1000px;
+        height: 70vh;
+        top: 100px;
+        background-color: #FF6666;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        transition: 0.2s ease-in;
+        
+        
+    }
+    .menu.active{
+        right: 0px;
+
+    }
+    .menu li{
+        opacity: 10;
+    }
+    .burger{
+        display: block;
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+    
+    
+    
+}
+.nav-active{
+    transform: translateX(0%);
+}
+@media only screen and (max-width:700px){
+    .left-side h4{
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .left-side h2{
+        font-size: 23px;
+        font-weight: 100;
+    }
+    .icons li{
+        font-size: 17px;
+    }
+
 }
