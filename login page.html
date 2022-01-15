@@ -7,6 +7,7 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="login page.css">
     <script src="https://kit.fontawesome.com/8fb78c4ea1.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </head>
 <body>
     <main class="content-one">
@@ -38,13 +39,16 @@
     <div class="main-content">
         <div class="up-main-content">
             <h4>Login</h4>
-            <div class="login-line"></div>
+            <div class="login-line"></div> 
         </div>
     </div>
-    <form class="input-1">
+    <form method="post" action="successpage.html" onsubmit="return validation()">
+        <div class="input_1">
             <input type="email" id="fname" name="fname" placeholder="Email">
             <input type="password" id="Password" name="fname" placeholder="Password">
+            <span class="error_msg">Incorrect username or password. please try again.</span>
             <button class="button">Login</button>
+        </div>
     </form>
     <div class="down-main-content">
         <div class="right-side">

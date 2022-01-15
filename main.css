@@ -13,6 +13,12 @@ body{
     
 
 }
+.head-right{
+    display: block;
+}
+.burger{
+    display: none;
+}
 .Landing-Page{
    display: flex;
    flex-direction: column;
@@ -95,3 +101,15 @@ body{
 .fas:hover{
     background-color: rgb(41, 35, 35);
 }
+@media only screen and (max-width: 750px) {
+    .head-right{
+        display: none;
+    }
+    .left-side h4{
+        font-size: 25px;
+    }
+    .fas fa-bars{
+    
+    }
+}
+

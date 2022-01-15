@@ -84,6 +84,7 @@ body{
     text-decoration: none;
     display: inline-block;
     border-radius: 50px;
+    letter-spacing: 3px;
 }
 .button:hover{
     transition: 0.4s ease;
@@ -157,7 +158,7 @@ body{
     background-color: #000;
     border-radius: 50%;
 }
-.input-1{
+.input_1{
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -211,4 +212,14 @@ input[type="checkbox"]:hover, .check-box label{
 }
 input[type="checkbox"]:checked:after{
     display: block;
+}
+.input_1 span{
+    font-size: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    display: none;
+
 }
