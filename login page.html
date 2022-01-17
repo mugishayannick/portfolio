@@ -7,6 +7,7 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="login page.css">
     <script src="https://kit.fontawesome.com/8fb78c4ea1.js" crossorigin="anonymous"></script>
+    <script src="login.js"></script>
 </head>
 <body>
     <main class="content-one">
@@ -16,7 +17,7 @@
 
             </div>
             <div class="left-content-one">
-                <ul class="menu">
+                <ul id="menu" class="menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="Blog page.html">Blog</a></li>
                     <li><a href="contact page.html">Contact</a></li>
@@ -24,6 +25,9 @@
                     <li><a href="login page.html">Login</a></li>
 
                 </ul>
+                <div id="burger" class="burger">
+                    <i id="burger" class="fas fa-bars"></i></div>
+                </div> 
 
             </div>
             
@@ -38,13 +42,17 @@
     <div class="main-content">
         <div class="up-main-content">
             <h4>Login</h4>
-            <div class="login-line"></div>
+            <div class="login-line"></div> 
         </div>
     </div>
-    <form class="input-1">
+    <form method="post" action="successpage.html" onsubmit="return validation()">
+        <div id="input-1" class="input_1">
             <input type="email" id="fname" name="fname" placeholder="Email">
+            <p class="error-fname">Enter a valid email address</p>
             <input type="password" id="Password" name="fname" placeholder="Password">
-            <button class="button">Login</button>
+            <p class="error-password">Enter a correct passowrd</p>
+            <button type="login" class="button">Login</button>
+        </div>
     </form>
     <div class="down-main-content">
         <div class="right-side">
@@ -91,6 +99,6 @@
            </div>
         </div>
    
-<script src="app.js"></script>    
+    
 </body>
 </html>

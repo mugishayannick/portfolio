@@ -41,6 +41,13 @@ body{
     color:rgb(8, 66, 60); 
     transition: 0.4s;
 }
+.burger{
+    color: white;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    display: none;
+}
 .middle-content-one{
     width: 100%;
     color: white;
@@ -61,6 +68,20 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0 auto 30px auto;
+}
+.error-fname{
+    color: red;
+    margin: 0px 100px;
+    margin-top: -30px;
+    margin-bottom: 30px
+    
+}
+.error-password{
+    color: red;
+    margin: 0px 100px;
+    margin-top: -30px;
+    margin-bottom: 30px
+    
 }
 
 .up-main-content h4{
@@ -84,6 +105,7 @@ body{
     text-decoration: none;
     display: inline-block;
     border-radius: 50px;
+    letter-spacing: 3px;
 }
 .button:hover{
     transition: 0.4s ease;
@@ -157,7 +179,7 @@ body{
     background-color: #000;
     border-radius: 50%;
 }
-.input-1{
+.input_1{
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -212,3 +234,40 @@ input[type="checkbox"]:hover, .check-box label{
 input[type="checkbox"]:checked:after{
     display: block;
 }
+@media only screen and (max-width:700px){
+    body{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:800px){
+    body{
+        overflow-x: hidden;
+    }
+    .menu{
+        position: fixed;
+        right: -1000px;
+        height: 70vh;
+        top: 100px;
+        background-color: #FF6666;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        transition: 0.2s ease-in;
+        
+        
+    }
+    .menu.active{
+        right: 0px;
+
+    }
+    .menu li{
+        opacity: 10;
+    }
+    .burger{
+        display: block;
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+    

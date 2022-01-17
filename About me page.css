@@ -25,16 +25,12 @@ body{
 .menu li a{
     color: white;
     text-decoration: none;
-    border: 1px solid;
-    
-    
     
 }
 .menu li{
     display: inline;
     margin-left: 20px;
-    border: 1px solid transparent;
-    
+}
 .menu li a:hover{
     color: rgb(8, 66, 60);
     transition: 0.4s;
