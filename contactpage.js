@@ -16,17 +16,40 @@ contactForm.addEventListener('submit',(e)=>{
     const name=document.querySelector('#name').value;
     const email=document.querySelector('#email').value;
     const phone=document.querySelector('#phone').value;
-    const text=document.querySelector('#w3review').value;
+    const message=document.querySelector('#w3review').value;
     if(name.length==0){
         document.querySelector('.error-name').innerHTML="Please enter a name";
+        document.querySelector('.error-name').style.color="red";
     }else if(email.length==0){
         document.querySelector('.error-email').innerHTML="Please enter your email";
+        document.querySelector('.error-email').style.color="red";
     }else if(phone.length==0){
-        document.querySelector('.error-phone').innerHTML="Please enter telephone number";
-    }else if(text.length==0){
+        document.querySelector('.error-phone').innerHTML="Enter telephone number";
+        document.querySelector('.error-phone').style.color="red";
+    }else if(message.length==0){
         document.querySelector('.error-text').innerHTML="Please enter your query";
+        document.querySelector('.error-text').style.color="red";
     }else{
-        contactForm.submit();
+        //contactForm.submit();
+        //add data to localstorage
+        var messageObject=[
+            {
+                visitorname:name,
+                visitoremail:email,
+                visitorphone:phone,
+                message:message,
+            },
+        ];
+        if (localStorage.getItem('messages')) {
+            //append 
+            var mymessages=JSON.parse(localStorage.getItem('messages'));
+            mymessages.unshift(messageObject);
+            localStorage.setItem('messages',JSON.stringify(mymessages)); 
+        } else {
+            //set localstorage key and value 
+            localStorage.setItem('messages',JSON.stringify(messageObject));           
+        }
+        console.log(JSON.parse(localStorage.getItem('messages')));
     }
 });
 const contactFormEl=document.querySelectorAll('#name,#email,#phone,#w3review');
@@ -35,7 +58,7 @@ contactFormEl.forEach((el,index)=>{
         var val=e.target.value;
         if(val.length>0 && e.target.id=='name'){ 
             document.querySelector('.error-name').style.display="none";
-        }else if(val.length>0 && e.target.id=='email'){ 
+        }else if(val.length>0 && e.target.id=='email'){
             document.querySelector('.error-email').style.display="none";
         }else if(val.length>0 && e.target.id=='phone'){ 
             document.querySelector('.error-phone').style.display="none";
