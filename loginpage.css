@@ -1,0 +1,273 @@
+@import url('./fonts.css');
+@import url('./header.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: fit-content;
+    height: auto;
+    
+}
+
+.content-one{
+    background-color: #FFD324;
+    width: 100%;
+    height: auto;
+    
+}
+.up-content-one{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+.right-content-one{
+    color: white;
+    font-size: 17px;
+}
+.menu li{
+    display: inline;
+    margin-left: 20px;
+    
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+.menu li a:hover{
+    color:rgb(8, 66, 60); 
+    transition: 0.4s;
+}
+.burger{
+    color: white;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    display: none;
+}
+.middle-content-one{
+    width: 100%;
+    color: white;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
+.middle-content-one h5{
+    margin-bottom: 40px;
+}
+.main-content{
+    background-color: white;
+}
+.up-main-content{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 30px auto;
+}
+.error-email{
+    color: red;
+    margin: 0px 100px;
+    margin-top: -30px;
+    margin-bottom: 30px
+    
+}
+.error-password{
+    color: red;
+    margin: 0px 100px;
+    margin-top: -30px;
+    margin-bottom: 30px
+    
+}
+
+.up-main-content h4{
+    font-size: 30px;
+    font-weight: 500;
+    color: #FFD324;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    
+}
+.button{
+    background-color: #FFD324; 
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    width: 30%;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50px;
+    letter-spacing: 3px;
+}
+.button:hover{
+    transition: 0.4s ease;
+    background-color: rgb(8, 66, 60);
+}
+.down-main-content{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    margin-bottom: 150px; 
+    padding: 0px 360px;  
+}
+.right-side{
+    margin-top: 50px;
+    cursor: pointer;
+}
+.left-side{
+    margin-top: 50px;
+    cursor: pointer;
+    
+    
+    
+}
+.section-four{
+    display: flex;
+}
+.section-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 40px;
+    background-color: #6F77F4;
+    width: 90%;
+    color: white;
+    
+}
+
+.left h1{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.section-right{
+    color: white;
+    background-color: #FF6666;
+    width: 30%;
+}
+.icons li{
+    display: inline;
+    margin-right: 10px;
+    cursor: pointer;
+    
+}
+.icons li:hover{
+    color: rgb(8, 66, 60);
+    transition: 0.4s;
+}
+.icons{
+    color: white;
+}
+.down-content{
+    padding: 50px 50px;
+}
+.down-content p{
+    margin-bottom: 10px;
+}
+.login-line{
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 50%;
+}
+.input_1{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+}
+input[type="email"], input[type="password"]{
+    padding: 16px 30px;
+    margin-bottom: 30px;
+    outline: none;
+    border: .5px solid #000;
+    border-radius: 50px;
+    font-size: 15px;
+}
+
+.check-box{
+    display: flex;
+    align-items: center;
+}
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: .5vw;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2.5px solid #000;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+}
+input[type="checkbox"]:after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 13.5px;
+    color: #000;
+    display: none;  
+}
+input[type="checkbox"]:hover{
+    transition: .4s;
+    border: 2.5px solid #000;
+}
+input[type="checkbox"]:hover, .check-box label{
+    cursor: pointer;
+}
+.check-box label:hover{
+    transition: .3s ease;
+    color: #6F77F4;
+}
+input[type="checkbox"]:checked:after{
+    display: block;
+}
+@media only screen and (max-width:700px){
+    body{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:800px){
+    body{
+        overflow-x: hidden;
+    }
+    .menu{
+        position: fixed;
+        right: -1000px;
+        height: 70vh;
+        top: 100px;
+        background-color: #FF6666;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        transition: 0.2s ease-in;
+        
+        
+    }
+    .menu.active{
+        right: 0px;
+
+    }
+    .menu li{
+        opacity: 10;
+    }
+    .burger{
+        display: block;
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+    
