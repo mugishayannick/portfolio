@@ -30,7 +30,26 @@ contactForm.addEventListener('submit',(e)=>{
         document.querySelector('.error-text').innerHTML="Please enter your query";
         document.querySelector('.error-text').style.color="red";
     }else{
-        contactForm.submit();
+        //contactForm.submit();
+        //add data to localstorage
+        var messageObject=[
+            {
+                visitorname:name,
+                visitoremail:email,
+                visitorphone:phone,
+                message:message,
+            },
+        ];
+        if (localStorage.getItem('messages')) {
+            //append 
+            var mymessages=JSON.parse(localStorage.getItem('messages'));
+            mymessages.unshift(messageObject);
+            localStorage.setItem('messages',JSON.stringify(mymessages)); 
+        } else {
+            //set localstorage key and value 
+            localStorage.setItem('messages',JSON.stringify(messageObject));           
+        }
+        console.log(JSON.parse(localStorage.getItem('messages')));
     }
 });
 const contactFormEl=document.querySelectorAll('#name,#email,#phone,#w3review');
