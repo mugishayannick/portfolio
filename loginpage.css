@@ -71,14 +71,14 @@ body{
 }
 .error-email{
     color: red;
-    margin: 0px 100px;
+    margin: 0px 25px;
     margin-top: -30px;
     margin-bottom: 30px
     
 }
 .error-password{
     color: red;
-    margin: 0px 100px;
+    margin: 0px 25px;
     margin-top: -30px;
     margin-bottom: 30px
     
@@ -248,7 +248,7 @@ input[type="checkbox"]:checked:after{
         right: -1000px;
         height: 70vh;
         top: 100px;
-        background-color: #FF6666;
+        background-color: #FFD324;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -270,4 +270,4 @@ input[type="checkbox"]:checked:after{
         margin-bottom: 40px;
         font-size: 20px;
     }
-    
+}    

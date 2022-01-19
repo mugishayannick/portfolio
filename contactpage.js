@@ -1,15 +1,4 @@
-const nav = document.getElementById("menu");
-    const burger = document.getElementById("burger")
 
-    burger.addEventListener("click", () => {
-    
-        if (nav.classList.contains('active')) {
-            nav.classList.remove('active');
-           } else {
-            nav.classList.add('active');
-           }
-        
-    });
 const contactForm=document.querySelector('.contact-form');
 contactForm.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -67,3 +56,14 @@ contactFormEl.forEach((el,index)=>{
         }      
     });
 });
+const nav = document.getElementById("menu");
+    const burger = document.getElementById("burger")
+
+    burger.addEventListener("click", () => {
+    
+        if (nav.classList.contains('active')) {
+            nav.classList.remove('active');
+           } else {
+            nav.classList.add('active');
+           }
+    });

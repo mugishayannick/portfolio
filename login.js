@@ -9,7 +9,7 @@ loginForm.addEventListener('submit',(e)=>{
         document.querySelector('.error-password').innerHTML="please enter a password";
     }else{
         //loginForm.submit();
-        window.location.href="successpage.html";
+        window.location.href="admin.html";
     }    
 
 });
@@ -24,3 +24,14 @@ postEl.forEach((el,index)=>{
         }
     });
 });
+const nav = document.getElementById("menu");
+    const burger = document.getElementById("burger")
+
+    burger.addEventListener("click", () => {
+    
+        if (nav.classList.contains('active')) {
+            nav.classList.remove('active');
+           } else {
+            nav.classList.add('active');
+           }
+    });
