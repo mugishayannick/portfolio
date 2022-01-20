@@ -113,6 +113,10 @@ body{
     
     
 }
+.error-name{
+    width: 90% !important;
+    margin-top: -0.5px !important;
+}
 .content-right-side{
     padding: 80px 80px;
     
@@ -172,7 +176,7 @@ body{
  
 .section-four{
     display: flex;
-    position: relative;
+    
   
 }
 .section-left{
@@ -206,6 +210,7 @@ body{
     margin-right: 10px;
     cursor: pointer;
     
+    
 }
 .icons li:hover{
     color: rgb(8, 66, 60);
@@ -213,7 +218,7 @@ body{
 }
 .icons{
     
-    color: white;
+    color: white !important;
 }
 .down-content{
     padding: 50px 50px;
@@ -261,11 +266,29 @@ body{
     transform: translateX(0%);
 }
 @media only screen and (max-width:915px){
-    .section-one{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
+    
+        .section-one {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+           
+        }
+        .section-two {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .section-three {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }   
+        .section-four {
+            font-size: 9px;
+            
+        }
+        
    
 
 }

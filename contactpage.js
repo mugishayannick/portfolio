@@ -52,7 +52,7 @@ contactFormEl.forEach((el,index)=>{
         }else if(val.length>0 && e.target.id=='phone'){ 
             document.querySelector('.error-phone').style.display="none";
         }else if(val.length>0 && e.target.id=='w3review'){ 
-            document.querySelector('.error-w3review').style.display="none";
+            document.querySelector('.error-text').style.display="none";
         }      
     });
 });

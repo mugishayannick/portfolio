@@ -1,5 +1,5 @@
-const newarticle=document.querySelector('.newarticle');
-newarticle.addEventListener('SAVE ARTICLE',(e) =>{
+const formarticle=document.querySelector('.form-aricle');
+formarticle.addEventListener('SAVE ARTICLE',(e) =>{
     e.preventDefault();
     const title=document.querySelector('#title').value;
     const category=document.querySelector('#category').value;
@@ -39,8 +39,8 @@ newarticle.addEventListener('SAVE ARTICLE',(e) =>{
     }
 
 });
-const newarticleEl=document.querySelectorAll('#title,#category,#text');
-newarticleEl.forEach((el,index)=>{
+const formarticleEl=document.querySelectorAll('#title,#category,#text');
+formarticlecontainerEl.forEach((el,index)=>{
     el.addEventListener('change',(e)=>{
         var val=e.target.value;
         if(val.length>0 && e.target.id=='title'){ 
