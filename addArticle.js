@@ -1,54 +1,55 @@
-const formarticle=document.querySelector('.form-aricle');
-formarticle.addEventListener('SAVE ARTICLE',(e) =>{
+const formarticle=document.querySelector('.form-article');
+window.addEventListener('load',(e)=>{
+    //get all articles 
+    getArticles();
+    // formarticle.classList.add("show");
+});
+formarticle==null ? null:formarticle.addEventListener('submit',(e) =>{
     e.preventDefault();
     const title=document.querySelector('#title').value;
-    const category=document.querySelector('#category').value;
-    const text=document.querySelector('#text').value;
+    const textbody=document.querySelector('#text').value;
     if(title.length==0){
         document.querySelector('error-title').innerHTML="please enter a title";
         document.querySelector('.error-title').style.color="red";
-
-    }else if(category.length==0){
-        document.querySelector('.error-category').innerHTML="please select a category";
-        document.querySelector('.error-category').style.color="red";
     }else if(text.length==0){
         document.querySelector('.error-text').innerHTML="please enter a text";
         document.querySelector(',error-text').style.color="red";
     }else{
-        //newarticle.send();
         //add data to localstorage
         var textobject=[
             {
-                visitortitle:title,
-                visitorcategory:category,
-                text:text,
-
+                articletitle:title,
+                text:textbody,
+                likes:[],
+                comments:[],
             }
         ];
-        if (localStorage.getItem('text')) {
+        if (localStorage.getItem('articles')) {
             //append
-            var mytext=JSON.parse(localStorage.getItem('text'));
+            var mytext=JSON.parse(localStorage.getItem('articles'));
             mytext.unshift(textobject);
-            localStorage.setItem('text',JSON.stringify(mytext));
+            localStorage.clear();
+            localStorage.setItem('articles',JSON.stringify(mytext));
         }else{
             //set localstorage key and value
-            localStorage.setItem('text',JSON.stringify(textobject));
+            localStorage.setItem('articles',JSON.stringify(textobject));
         }
-        console.log(JSON.parse(localStorage.getItem(text)));
-         
+        window.location.href="addarticles.html";
     }
+});
 
-});
-const formarticleEl=document.querySelectorAll('#title,#category,#text');
-formarticlecontainerEl.forEach((el,index)=>{
-    el.addEventListener('change',(e)=>{
-        var val=e.target.value;
-        if(val.length>0 && e.target.id=='title'){ 
-            document.querySelector('.error-title').style.display="none";
-        }else if(val.length>0 && e.target.id=='category'){
-            document.querySelector('.error-category').style.display="none";
-        }else if(val.length>0 && e.target.id=='text'){ 
-            document.querySelector('.error-text').style.display="none";
-        }
-    });
-});
+function getArticles(){
+    var parentEl=document.querySelector('.list-articles');
+    if(localStorage.getItem('articles')){
+        var articles=JSON.parse(localStorage.getItem('articles'));
+        articles ==null ?null :articles.forEach((element,index) => {
+            for (let i = 0; i < articles[index].length; i++) {
+                // console.log(articles[index][i].articletitle);
+                var listEl=document.createElement('li');
+                var listtext=document.createTextNode(`${articles[index][i].articletitle}`);
+                listEl.appendChild(listtext);
+                parentEl.append(listEl);
+            }                     
+        });
+    }  
+}

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="AddArticle.css">
-    <script src="addArticle.js"></script>
 </head>
 <body>
     <div class="nav-container">
@@ -25,29 +24,30 @@
             <div class="main-body">
                 <div class="blog">
                     <div class="new-article">
-                        <h1>Blog|Article</h1>
                         <form class="form-article" id="newarticle" method="post">
                             <label for="names">Title</label>
                             <input type="text" id="title" name="title">
                             <p class="error" id="error-title"></p>
-                            <label for="category">Article Category</label>
-                            <select name="category" id="category" name="category">
-                                <option>Select category</option>
-                                <option value="1">Web development</option>
-                            </select>
-                            <p class="error" id="error-category"></p>
                             <label for="message">Text</label>
                             <textarea id="text" name="text"></textarea>
                             <p class="error" id="error-text"></p>
-                            <button type="submit" name="article">SAVE ARTICLE</button>
+                            <button type="submit" name="btn-article">SAVE ARTICLE</button>
                         </form>
+                    </div>
+                </div>
+                <div class="btn-title">
+                    <h1 style="color:white;font-size:15px">SAVED ARTICLES</h1><hr>
+                </div>
+                <div class="blog">
+                    <div class="saved-articles">
+                        <ol class="list-articles">
+                        </ol>
                     </div>
                 </div>
             </div>
             <div class="main-footer">
             </div>
     </div>
-    
-    <script src="../js/app.js"></script>
+    <script src="addArticle.js"></script>
 </body>
 </html>
